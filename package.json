@@ -1,0 +1,46 @@
+{
+  "name": "crypto-puzzle",
+  "description": "Basically a proof-of-work generator, this library makes cryptographic puzzles that are arbitrarily expensive to solve.",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "benchmark": "node tasks/benchmark.js",
+    "clean": "rimraf dist",
+    "compile": "tsc --skipLibCheck && tstei",
+    "compile:watch": "tsc --skipLibCheck --watch",
+    "test": "fava",
+    "test:watch": "fava -w",
+    "prepublishOnly": "npm run clean && npm run compile && npm run test"
+  },
+  "bugs": {
+    "url": "https://github.com/fabiospampinato/cryto-puzzle/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Fabio Spampinato",
+    "email": "spampinabio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabiospampinato/cryto-puzzle.git"
+  },
+  "keywords": [
+    "crypto",
+    "puzzle",
+    "pow",
+    "proof-of-work",
+    "captcha"
+  ],
+  "dependencies": {
+    "crypto-random-hexadecimal": "^1.0.0",
+    "crypto-random-in-range": "^1.0.0",
+    "crypto-sha": "^1.0.0"
+  },
+  "devDependencies": {
+    "fava": "^0.0.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5",
+    "typescript-transform-export-interop": "^1.0.4"
+  }
+}
