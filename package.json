@@ -33,9 +33,9 @@
     "captcha"
   ],
   "dependencies": {
-    "crypto-random-hexadecimal": "^1.0.0",
+    "crypto-random-bigint": "^1.0.0",
     "crypto-random-in-range": "^1.0.0",
-    "crypto-sha": "^1.0.0"
+    "crypto-xxhash-64": "^1.1.0"
   },
   "devDependencies": {
     "fava": "^0.0.4",

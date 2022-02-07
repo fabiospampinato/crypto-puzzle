@@ -15,14 +15,14 @@ Puzzles are generated this way:
 1. A random salt is generated.
 2. A random integer is picked between `0` and `difficulty`, that's going to be the solution of the puzzle.
 3. The salt and integer are joined together to form the key.
-4. The key is hashed with SHA-512.
+4. The key is hashed.
 5. The solver receives the `difficulty`, the salt and the hash and it's asked to find the solution.
 
 Puzzles are solved this way:
 
 1. For all integers between `0` and `difficulty` the following actions are performed.
 2. The current integer, which is the potential solution, is joined with the salt to form the key.
-3. The key is hashed with SHA-512.
+3. The key is hashed.
 4. If the key doesn't match the correct one the next integer is tried.
 5. If the key matches the correct one the integer is the solution and the puzzle is solved.
 

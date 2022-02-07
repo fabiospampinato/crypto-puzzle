@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-import getHexadecimal from 'crypto-random-hexadecimal';
+import XXH from 'crypto-xxhash-64';
+import getBigInt from 'crypto-random-bigint';
 import getInRange from 'crypto-random-in-range';
-import {sha512} from 'crypto-sha';
 import {Question, Solution, Puzzle} from './types';
 
 /* MAIN */
@@ -18,10 +18,12 @@ const Puzzle = {
 
     if ( difficulty <= 0n ) throw new Error ( 'The difficulty must be positive' );
 
-    const salt = getHexadecimal ( 64 );
+    await XXH.loadWASM ();
+
+    const salt = getBigInt ( 64 ).toString ( 16 );
     const solution = getInRange ( 0, difficulty );
-    const key = `${salt}${solution}`;
-    const hash = await sha512 ( key );
+    const key = `${salt}${solution.toString ( 16 )}`;
+    const hash = XXH.hash ( key );
     const question = { difficulty, salt, hash };
     const puzzle = { question, solution };
 
@@ -31,10 +33,12 @@ const Puzzle = {
 
   solve: async ( question: Question ): Promise<Solution> => {
 
+    await XXH.loadWASM ();
+
     for ( let i = 0n, l = question.difficulty; i < l; i++ ) {
 
-      const key = `${question.salt}${i}`;
-      const hash = await sha512 ( key );
+      const key = `${question.salt}${i.toString ( 16 )}`;
+      const hash = XXH.hash ( key );
 
       if ( hash !== question.hash ) continue;
 
