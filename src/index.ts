@@ -4,6 +4,7 @@
 import XXH from 'crypto-xxhash-64';
 import getBigInt from 'crypto-random-bigint';
 import getInRange from 'crypto-random-in-range';
+import {makeTimeoutYielder} from 'event-loop-yielder';
 import {Question, Solution, Puzzle} from './types';
 
 /* MAIN */
@@ -35,14 +36,18 @@ const Puzzle = {
 
     await XXH.loadWASM ();
 
-    for ( let i = 0n, l = question.difficulty; i < l; i++ ) {
+    const yielder = makeTimeoutYielder ( 8 );
 
-      const key = `${question.salt}${i.toString ( 16 )}`;
+    for ( let i = 0, si = 0n, sl = question.difficulty; si < sl; i++, si++ ) {
+
+      if ( i % 200 === 0 ) await yielder ();
+
+      const key = `${question.salt}${si.toString ( 16 )}`;
       const hash = XXH.hash ( key );
 
       if ( hash !== question.hash ) continue;
 
-      return i;
+      return si;
 
     }
 
