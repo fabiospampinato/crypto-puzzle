@@ -33,8 +33,8 @@
     "captcha"
   ],
   "dependencies": {
-    "crypto-random-bigint": "^1.0.0",
-    "crypto-random-in-range": "^1.0.0",
+    "crypto-random-bigint": "^1.1.0",
+    "crypto-random-in-range": "^1.0.1",
     "crypto-xxhash-64": "^1.1.0",
     "event-loop-yielder": "^1.0.0"
   },
