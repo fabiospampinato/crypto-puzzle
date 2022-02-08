@@ -1,7 +1,7 @@
 {
   "name": "crypto-puzzle",
   "description": "Basically a proof-of-work generator, this library makes cryptographic puzzles that are arbitrarily expensive to solve.",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
