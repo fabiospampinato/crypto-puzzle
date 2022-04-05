@@ -1,8 +1,8 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {default: Puzzle} = require ( '../dist' );
+import {describe} from 'fava';
+import Puzzle from '../dist/index.js';
 
 /* MAIN */
 

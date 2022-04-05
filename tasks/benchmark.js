@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-const {default: Puzzle} = require ( '../dist' );
+import Puzzle from '../dist/index.js';
 
 /* MAIN */
 

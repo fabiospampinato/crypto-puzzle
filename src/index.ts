@@ -5,7 +5,7 @@ import XXH from 'crypto-xxhash-64';
 import getBigInt from 'crypto-random-bigint';
 import getInRange from 'crypto-random-in-range';
 import {makeTimeoutYielder} from 'event-loop-yielder';
-import {Question, Solution, Puzzle} from './types';
+import type {Question, Solution, Puzzle} from './types';
 
 /* MAIN */
 

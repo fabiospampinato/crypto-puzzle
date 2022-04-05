@@ -16,4 +16,4 @@ type Puzzle = {
 
 /* EXPORT */
 
-export {Question, Solution, Puzzle};
+export type {Question, Solution, Puzzle};
