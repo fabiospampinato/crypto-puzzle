@@ -9,7 +9,7 @@ import type {Question, Solution, Puzzle} from './types';
 
 /* MAIN */
 
-const Puzzle = {
+const CryptoPuzzle = {
 
   /* API */
 
@@ -55,4 +55,4 @@ const Puzzle = {
 
 /* EXPORT */
 
-export default Puzzle;
+export default CryptoPuzzle;
