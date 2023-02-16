@@ -46,4 +46,4 @@ const main = async ( difficulty, iterations ) => {
 
 };
 
-main ( 500000, 100 );
+main ( 50000, 100 );

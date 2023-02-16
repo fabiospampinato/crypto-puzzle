@@ -4,7 +4,7 @@
 import getBigInt from 'crypto-random-bigint';
 import getInRange from 'crypto-random-in-range';
 import {sha512} from 'crypto-sha';
-import {makeTimeoutYielder} from 'event-loop-yielder';
+import {makeIntervalYielder} from 'event-loop-yielder';
 import type {Question, Solution, Puzzle} from './types';
 
 /* MAIN */
@@ -32,7 +32,7 @@ const CryptoPuzzle = {
 
   solve: async ( question: Question ): Promise<Solution> => {
 
-    const yielder = makeTimeoutYielder ( 8 );
+    const yielder = makeIntervalYielder ( 8 );
 
     for ( let i = 0, si = 0n, sl = question.difficulty; si < sl; i++, si++ ) {
 
