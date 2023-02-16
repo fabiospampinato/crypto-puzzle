@@ -2,7 +2,7 @@
   "name": "crypto-puzzle",
   "repository": "github:fabiospampinato/crypto-puzzle",
   "description": "Basically a proof-of-work generator, this library makes cryptographic puzzles that are arbitrarily expensive to solve.",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
