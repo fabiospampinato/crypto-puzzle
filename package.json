@@ -2,7 +2,7 @@
   "name": "crypto-puzzle",
   "repository": "github:fabiospampinato/crypto-puzzle",
   "description": "A time-lock puzzle generator",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
