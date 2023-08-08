@@ -5,9 +5,21 @@ const sfme = ( a: bigint, t: bigint, n: bigint ): bigint => { //TODO: Maybe add 
 
   let x = a % n;
 
-  for ( let i = t; i > 0n; i-- ) {
+  if ( t <= BigInt ( Number.MAX_SAFE_INTEGER ) ) {
 
-    x = ( x * x ) % n;
+    for ( let i = Number ( t ); i > 0; i-- ) {
+
+      x = ( x * x ) % n;
+
+    }
+
+  } else {
+
+    for ( let i = t; i > 0n; i-- ) {
+
+      x = ( x * x ) % n;
+
+    }
 
   }
 

@@ -25,7 +25,7 @@ const CryptoPuzzle = {
 
     const PRIME_BITS = options.primeBits ?? 100;
     const PRIME_ROUNDS = options.primeRounds ?? 6;
-    const OPS_PER_SECOND = options.opsPerSecond ?? 3_000_000;
+    const OPS_PER_SECOND = options.opsPerSecond ?? 3_300_000;
     const DURATION = options.duration ?? 1_000;
     const MESSAGE = options.message;
 
