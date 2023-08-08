@@ -1,15 +1,13 @@
 {
   "name": "crypto-puzzle",
   "repository": "github:fabiospampinato/crypto-puzzle",
-  "description": "Basically a proof-of-work generator, this library makes cryptographic puzzles that are arbitrarily expensive to solve.",
+  "description": "A time-lock puzzle generator",
   "version": "4.0.2",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "benchmark": "tsex benchmark",
-    "benchmark:watch": "tsex benchmark --watch",
     "clean": "tsex clean",
     "compile": "tsex compile",
     "compile:watch": "tsex compile --watch",
@@ -19,20 +17,27 @@
   },
   "keywords": [
     "crypto",
+    "time-lock",
     "puzzle",
     "pow",
     "proof-of-work",
     "captcha"
   ],
   "dependencies": {
-    "crypto-random-bigint": "^2.0.0",
+    "bigint-encoding": "^1.0.0",
     "crypto-random-in-range": "^2.0.0",
-    "crypto-sha": "^2.0.1",
-    "event-loop-yielder": "^3.0.1"
+    "crypto-random-prime": "^1.0.0",
+    "crypto-random-uint8": "^2.0.0",
+    "crypto-sha": "^2.1.0",
+    "fast-mod-exp": "^1.0.0",
+    "int32-encoding": "^1.0.0",
+    "tiny-encryptor": "^1.0.0",
+    "uint8-concat": "^1.0.0",
+    "uint8-encoding": "^2.0.0"
   },
   "devDependencies": {
-    "fava": "^0.2.0",
-    "tsex": "^2.2.0",
-    "typescript": "^4.9.5"
+    "fava": "^0.2.1",
+    "tsex": "^3.0.1",
+    "typescript": "^5.1.6"
   }
 }

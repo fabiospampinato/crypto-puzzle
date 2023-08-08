@@ -1,53 +1,69 @@
 
 /* IMPORT */
 
-import getBigInt from 'crypto-random-bigint';
+import fme from 'fast-mod-exp';
+import Encryptor from 'tiny-encryptor';
+import getPrime from 'crypto-random-prime';
 import getInRange from 'crypto-random-in-range';
-import {sha512} from 'crypto-sha';
-import {makeIntervalYielder} from 'event-loop-yielder';
-import type {Question, Solution, Puzzle} from './types';
+import getRandomBytes from 'crypto-random-uint8';
+import {sha256} from 'crypto-sha';
+import U8 from 'uint8-encoding';
+import BigEnc from 'bigint-encoding';
+import Archiver from './archiver';
+import {sfme} from './utils';
+import type {Options} from './types';
 
 /* MAIN */
+
+//URL: https://people.csail.mit.edu/rivest/pubs/RSW96.pdf
 
 const CryptoPuzzle = {
 
   /* API */
 
-  generate: async ( difficulty: number | bigint ): Promise<Puzzle> => {
+  generate: async ( options: Options ): Promise<Uint8Array> => {
 
-    difficulty = BigInt ( difficulty );
+    const PRIME_BITS = options.primeBits ?? 100;
+    const PRIME_ROUNDS = options.primeRounds ?? 6;
+    const OPS_PER_SECOND = options.opsPerSecond ?? 3_000_000;
+    const DURATION = options.duration ?? 1_000;
+    const MESSAGE = options.message;
 
-    if ( difficulty <= 0n ) throw new Error ( 'The difficulty must be positive' );
+    const p = getPrime ( PRIME_BITS, PRIME_ROUNDS );
+    const q = getPrime ( PRIME_BITS, PRIME_ROUNDS );
 
-    const salt = getBigInt ( 64 ).toString ( 16 );
-    const solution = getInRange ( 0, difficulty );
-    const key = `${salt}${solution.toString ( 16 )}`;
-    const hash = await sha512 ( key );
-    const question = { difficulty, salt, hash };
-    const puzzle = { question, solution };
+    const n = p * q;
+    const n1 = ( p - 1n ) * ( q - 1n );
 
-    return puzzle;
+    const S = OPS_PER_SECOND;
+    const T = DURATION;
+    const t = BigInt ( Math.round ( Math.max ( 1, ( S / 1000 ) ) * T ) );
+
+    const K = await sha256.uint8 ( getRandomBytes ( 32 ) );
+    const M = MESSAGE;
+    const Cm = await Encryptor.encrypt ( M, K );
+
+    const a = getInRange ( 1n, n - 1n );
+    const e = fme ( 2n, t, n1 );
+    const b = fme ( a, e, n );
+    const Ck = BigEnc.encode ( K ) + b;
+
+    const archive = Archiver.archive ([ n, a, t, Ck, Cm ]);
+
+    return archive;
 
   },
 
-  solve: async ( question: Question ): Promise<Solution> => {
+  solve: async ( puzzle: Uint8Array ): Promise<string> => {
 
-    const yielder = makeIntervalYielder ( 8 );
+    const [n, a, t, Ck, Cm] = Archiver.unarchive ( puzzle );
 
-    for ( let i = 0, si = 0n, sl = question.difficulty; si < sl; i++, si++ ) {
+    const b = sfme ( a, t, n );
+    const K = BigEnc.decode ( Ck - b );
+    const M_uint8 = await Encryptor.decrypt ( Cm, K );
+    const M = U8.decode ( M_uint8 );
 
-      if ( i % 200 === 0 ) await yielder ();
-
-      const key = `${question.salt}${si.toString ( 16 )}`;
-      const hash = await sha512 ( key );
-
-      if ( hash !== question.hash ) continue;
-
-      return si;
-
-    }
-
-    throw new Error ( 'The puzzle could not be solved' );
+    return M;
 
   }
 

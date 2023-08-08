@@ -1,19 +1,24 @@
 
 /* MAIN */
 
-type Question = {
-  difficulty: bigint,
-  salt: string,
-  hash: string
-};
+type Archive = [
+  n: bigint,
+  a: bigint,
+  t: bigint,
+  Ck: bigint,
+  Cm: Uint8Array
+];
 
-type Solution = bigint;
-
-type Puzzle = {
-  question: Question,
-  solution: Solution
+type Options = {
+  /* ADVANCED */
+  primeBits?: number,
+  primeRounds?: number,
+  opsPerSecond?: number,
+  /* MAIN */
+  duration: number,
+  message: string
 };
 
 /* EXPORT */
 
-export type {Question, Solution, Puzzle};
+export type {Archive, Options};

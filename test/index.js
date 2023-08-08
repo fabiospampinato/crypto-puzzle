@@ -8,14 +8,21 @@ import Puzzle from '../dist/index.js';
 
 describe ( 'Cryto Puzzle', it => {
 
-  it ( 'can generate puzzles that it can solve', async t => {
+  it ( 'can generate and solve puzzles in about the specified amount of time', async t => {
 
-    for ( let i = 0, l = 1000; i < l; i++ ) {
+    for ( const duration of [100, 1000, 2000, 3000, 4000] ) {
 
-      const puzzle = await Puzzle.generate ( 1000 );
-      const solution = await Puzzle.solve ( puzzle.question );
+      const start = Date.now ();
 
-      t.is ( puzzle.solution, solution );
+      const message = String ( duration );
+      const puzzle = await Puzzle.generate ({ duration, message });
+      const solution = await Puzzle.solve ( puzzle );
+
+      const end = Date.now ();
+      const elapsed = end - start;
+
+      t.is ( message, solution );
+      t.true ( elapsed >= duration * 0.9 && elapsed <= duration * 1.1 );
 
     }
 
