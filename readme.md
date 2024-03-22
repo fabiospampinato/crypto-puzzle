@@ -10,7 +10,7 @@ A time-lock puzzle is a computational puzzle that requires a deterministic numbe
 
 This works because the operations that need to be performed to solve a puzzle are not parallelizable, you can't solve time-lock puzzles meaningfully faster with a GPU or a million computers, and generating the puzzle is always cheap, because you know which prime numbers it's secured by, basically.
 
-Time-lock puzzles are basically little proof-of-works, they have lots of interesting applications, for example a solution like this can be used to fight spam, by requiring that each request that your server receives comes with its own solution to a unique time-lock puzzle, which would be cheap for you to generate, cheap for you to check, cheap for legitimate users to solve, but prohibitively expensive for abusers/spammers to solve. It can be used a sort of transparent captcha that can't be bypassed.
+Time-lock puzzles are basically little proof-of-works, they have lots of interesting applications, for example a solution like this can be used to fight spam, by requiring that each request that your server receives comes with its own solution to a unique time-lock puzzle, which would be cheap for you to generate, cheap for you to check, cheap for legitimate users to solve, but prohibitively expensive for abusers/spammers to solve many of. It can be used as a sort of transparent captcha that can't be bypassed.
 
 ## Install
 
