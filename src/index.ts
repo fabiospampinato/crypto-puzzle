@@ -72,3 +72,4 @@ const CryptoPuzzle = {
 /* EXPORT */
 
 export default CryptoPuzzle;
+export type {Options};
