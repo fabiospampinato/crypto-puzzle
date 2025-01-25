@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/crypto-puzzle",
   "description": "A time-lock puzzle generator",
   "license": "MIT",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
