@@ -1,7 +1,7 @@
 
 /* MAIN */
 
-const sfme = ( a: bigint, t: bigint, n: bigint ): bigint => { //TODO: Maybe add a special-cased for this in (power of two exponents) `fast-mod-exp`, somehow
+const sfme = ( a: bigint, t: bigint, n: bigint ): bigint => { //TODO: Maybe add a special-case for this in (power of two exponents) `fast-mod-exp`, somehow
 
   let x = a % n;
 
