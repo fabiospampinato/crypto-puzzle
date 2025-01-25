@@ -2,6 +2,7 @@
   "name": "crypto-puzzle",
   "repository": "github:fabiospampinato/crypto-puzzle",
   "description": "A time-lock puzzle generator",
+  "license": "MIT",
   "version": "5.0.2",
   "type": "module",
   "main": "dist/index.js",
@@ -24,20 +25,20 @@
     "captcha"
   ],
   "dependencies": {
-    "bigint-encoding": "^1.0.0",
-    "crypto-random-in-range": "^2.0.0",
-    "crypto-random-prime": "^1.0.0",
-    "crypto-random-uint8": "^2.0.0",
-    "crypto-sha": "^2.1.0",
-    "fast-mod-exp": "^1.0.0",
-    "int32-encoding": "^1.0.0",
-    "tiny-encryptor": "^1.0.0",
-    "uint8-concat": "^1.0.0",
-    "uint8-encoding": "^2.0.0"
+    "bigint-encoding": "^1.0.1",
+    "crypto-random-in-range": "^2.0.1",
+    "crypto-random-prime": "^1.0.1",
+    "crypto-random-uint8": "^2.0.1",
+    "crypto-sha": "^2.1.1",
+    "fast-mod-exp": "^1.0.1",
+    "int32-encoding": "^1.0.1",
+    "tiny-encryptor": "^1.0.1",
+    "uint8-concat": "^1.0.1",
+    "uint8-encoding": "^2.0.1"
   },
   "devDependencies": {
-    "fava": "^0.2.1",
-    "tsex": "^3.0.1",
-    "typescript": "^5.1.6"
+    "fava": "^0.3.4",
+    "tsex": "^4.0.2",
+    "typescript": "^5.7.3"
   }
 }
