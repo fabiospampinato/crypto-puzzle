@@ -6,7 +6,7 @@ import Puzzle from '../dist/index.js';
 
 /* MAIN */
 
-describe ( 'Cryto Puzzle', it => {
+describe ( 'Crypto Puzzle', it => {
 
   it ( 'can generate and solve puzzles in about the specified amount of time', async t => {
 
