@@ -18,7 +18,15 @@ type Options = {
   duration: number,
   message: string
 };
+type ParamsOptions = {
+  primeBits?: number,
+  primeRounds?: number
+};
 
+type Params = {
+  n: bigint,
+  n1: bigint
+};
 /* EXPORT */
 
-export type {Archive, Options};
+export type {Archive, Options, ParamsOptions, Params};
