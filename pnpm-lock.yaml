@@ -1,0 +1,401 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      bigint-encoding:
+        specifier: ^1.0.1
+        version: 1.0.1
+      crypto-random-in-range:
+        specifier: ^2.0.1
+        version: 2.0.1
+      crypto-random-prime:
+        specifier: ^1.0.1
+        version: 1.0.1
+      crypto-random-uint8:
+        specifier: ^2.0.1
+        version: 2.0.1
+      crypto-sha:
+        specifier: ^2.1.1
+        version: 2.1.1
+      fast-mod-exp:
+        specifier: ^1.0.1
+        version: 1.0.1
+      int32-encoding:
+        specifier: ^1.0.1
+        version: 1.0.1
+      tiny-encryptor:
+        specifier: ^1.0.1
+        version: 1.0.1
+      uint8-concat:
+        specifier: ^1.0.1
+        version: 1.0.1
+      uint8-encoding:
+        specifier: ^2.0.1
+        version: 2.0.1
+    devDependencies:
+      fava:
+        specifier: ^0.3.4
+        version: 0.3.5
+      tsex:
+        specifier: ^4.0.2
+        version: 4.0.2
+      typescript:
+        specifier: ^5.7.3
+        version: 5.9.3
+
+packages:
+
+  ansi-purge@1.1.0:
+    resolution: {integrity: sha512-sa1KWMANfZurQkYemaVNNJh8gRF0iUJvcVNxvjPlYM9pPPTB0v+VKH/mFRz4s6gXA8plimQXorJSqJgutxUs8g==}
+
+  are-deeply-equal@1.1.2:
+    resolution: {integrity: sha512-GatAcPLQ6zU6kE44J2K8pRY8sQUzUqmJRvzRfeZbzV3zBI69SpPzx6/oN1Jb8EUxamKfx+fyDOdipxkgkrcCBw==}
+
+  atomically@2.1.1:
+    resolution: {integrity: sha512-P4w9o2dqARji6P7MHprklbfiArZAWvo07yW7qs3pdljb3BWr12FIB7W+p0zJiuiVsUpRO0iZn1kFFcpPegg0tQ==}
+
+  bigint-encoding@1.0.1:
+    resolution: {integrity: sha512-WuV2XO9Vg9852jNyd8DPcyBGPEdEM/OAX6g+6ENUhcgdP2jQKxUYkTgYDz0Tn3HZRbZnXBJF0YSTf3CEwt9NVA==}
+
+  call-chainer@3.0.1:
+    resolution: {integrity: sha512-Fw9y5AM+nG+7s8I0VDpkVHtkASPNW/Sg3Z4ORqJ/PzhQMnflZ1qd9VN7TfWrcaT41FCcOwzHaz8NoNseAs+iJQ==}
+
+  crypto-miller-rabin@1.0.1:
+    resolution: {integrity: sha512-Aq9x2PurIXo4IqW25DYL3cL3i+eOVUsrUUxDBXjWdQgXOACUttZ0m9+PR0rWpdq6v1XZw9bZ+PZWk5RQnk/L1A==}
+
+  crypto-pbkdf2-hmac@2.2.2:
+    resolution: {integrity: sha512-Ur9N3CLTpL/2S2hxaLvREbCIMX5TzhUGAyhe665ayuRDreTivABUDJUIxJkBOQcrvctEwyQMPougz3pX5SXwjw==}
+
+  crypto-random-bigint@2.1.1:
+    resolution: {integrity: sha512-96+FDrenXybkpnLML/60S8NcG32KgJ5Y8yvNNCYPW02r+ssoXFR5XKenuIQcHLWumnGj8UPqUUHBzXNrDGkDmQ==}
+
+  crypto-random-in-range@2.0.1:
+    resolution: {integrity: sha512-BOoDfXi7pjDu780BhLgwfwErAfRqkVhS/O8qxuUf73ULH4iOFGQ08dBtcCRJ1Omk+8fLGxEKoix3wdi5OZL5CA==}
+
+  crypto-random-prime@1.0.1:
+    resolution: {integrity: sha512-WyJLOvJ8Z6Z3+Ep4s+fhBzqM1R+/1BRa8aA/Hy/krXeCvu88U2QyxDurcyqUF0DZ/CWkFnVg6ppSkQhDABmmCg==}
+
+  crypto-random-uint8@2.0.1:
+    resolution: {integrity: sha512-/BIwU0p3Q/Y/ied2l1I42rxvGTDwiOKc+jdIF/a5M+11rTJnPY2dp42o13etP8K+SkG4lA8xVsvKYe1u2e2R2g==}
+
+  crypto-sha@2.1.1:
+    resolution: {integrity: sha512-k+g3G9eQJN+yG2SfetEzXDWd1MVQugT/w9coUnHcmfVt7rWpkrA3XkDFmydAMPhe4a9EQz2ZH8OZe3PdajHMKQ==}
+
+  dettle@1.0.5:
+    resolution: {integrity: sha512-ZVyjhAJ7sCe1PNXEGveObOH9AC8QvMga3HJIghHawtG7mE4K5pW9nz/vDGAr/U7a3LWgdOzEE7ac9MURnyfaTA==}
+
+  fast-mod-exp@1.0.1:
+    resolution: {integrity: sha512-GWk3lnZmyKgonv4eaHYDd3UE5Sfy2b7yZIyLSQGiYzIwe3mRaCaKBZcpy1GVPrCtwv7cvqMgIPKtIxVqeSrt1w==}
+
+  fast-string-truncated-width@3.0.3:
+    resolution: {integrity: sha512-0jjjIEL6+0jag3l2XWWizO64/aZVtpiGE3t0Zgqxv0DPuxiMjvB3M24fCyhZUO4KomJQPj3LTSUnDP3GpdwC0g==}
+
+  fast-string-width@3.0.2:
+    resolution: {integrity: sha512-gX8LrtNEI5hq8DVUfRQMbr5lpaS4nMIWV+7XEbXk2b8kiQIizgnlr12B4dA3ZEx3308ze0O4Q1R+cHts8kyUJg==}
+
+  fava@0.3.5:
+    resolution: {integrity: sha512-6LAb6YZB1NbI+GlkrA5WPkqfHstNLy6AUJ/s+HEZaNRCN+JfKuUakkaH2oANY+YWnzOd6ISQUC/OBinP3wZP7A==}
+    hasBin: true
+
+  find-up-json@2.0.5:
+    resolution: {integrity: sha512-1zZZUfD1GOOEEd1AqwbRmCkCCv1O9t0vOpCYgmzfJqKty8WKaKlDyxWej8Aew+vI5lvDiTviaQuaVuu6GzlHzQ==}
+
+  find-up-path@1.0.1:
+    resolution: {integrity: sha512-cl4Sfxufq9WK848L887b4r+NVZoBjMeB4QydPZ+pXbp6Jt2nUVspTo2svNOm48stIIeSxtuCsULa9+e+LMTzwA==}
+
+  function-once@3.0.1:
+    resolution: {integrity: sha512-bE3E8REk4jANDot3l0sLFkXgywBwzFKsmbwdnVHLJUnt/3kV6dNG0oJJqoRBuS1Z9Lr4ZoQgwV0ZNLDgWDbv7Q==}
+
+  get-current-package@1.0.1:
+    resolution: {integrity: sha512-c/Rw5ByDQ+zg+Lh/emBWv0bDpugEFdmXPR6/srIemVtIvol0XbT0JAr8Db0cX+Jj/xY9wj1wdjeq2qNB35Tayg==}
+
+  grammex@3.1.13:
+    resolution: {integrity: sha512-LnPnhOBLEJEVKS8WFDVaA397L9Kq55Q9oSITJiVLHVdhAclfUkWzQv74KhvZHKL2Q09Pb1XdsrOsZ4LfTFFTEg==}
+
+  hex-encoding@2.0.3:
+    resolution: {integrity: sha512-sSmMo4ij2Vejht+5UkzuzNGiYgIWTSUw0GQqxHIQXsuuXB1ozYnjCZJZ/nwWNYRoU8+92Dp736wqxmiAN6/fcw==}
+
+  int32-encoding@1.0.1:
+    resolution: {integrity: sha512-BXk9vXfYYFcSOpGaCvK6Tv+8wX0Pl61EFWgmqhMLPa47V7+V1W3DqJXXPLY6FjAInVGHRNMKDO8u80gwUOuMVQ==}
+
+  ionstore@1.0.1:
+    resolution: {integrity: sha512-g+99vyka3EiNFJCnbq3NxegjV211RzGtkDUMbZGB01Con8ZqUmMx/FpWMeqgDXOqgM7QoVeDhe+CfYCWznaDVA==}
+
+  node-buffer-encoding@1.0.3:
+    resolution: {integrity: sha512-9hJZNChhQoCN1rCFScJiEwtzvWEJw2wSnu2nhDLD/YOYl1Ce8GbtnorsnjwwjpSk4sWE7zSp2etX6j7+bO7fVA==}
+
+  promise-make-counter@1.0.2:
+    resolution: {integrity: sha512-FJAxTBWQuQoAs4ZOYuKX1FHXxEgKLEzBxUvwr4RoOglkTpOjWuM+RXsK3M9q5lMa8kjqctUrhwYeZFT4ygsnag==}
+
+  promise-make-naked@2.1.2:
+    resolution: {integrity: sha512-y7s8ZuHIG56JYspB24be9GFkXA1zXL85Ur9u1DKrW/tvyUoPxWgBjnalK6Nc6l7wHBcAW0c3PO07+XOsWTRuhg==}
+
+  promise-make-naked@3.0.2:
+    resolution: {integrity: sha512-B+b+kQ1YrYS7zO7P7bQcoqqMUizP06BOyNSBEnB5VJKDSWo8fsVuDkfSmwdjF0JsRtaNh83so5MMFJ95soH5jg==}
+
+  promise-resolve-timeout@2.0.1:
+    resolution: {integrity: sha512-90Qzzu5SmR+ksmTPsc79121NZGtEiPvKACQLCl6yofknRx5xJI9kNj3oDVSX6dVTneF8Ju6+xpVFdDSzb7cNcg==}
+
+  specialist@1.4.5:
+    resolution: {integrity: sha512-4mPQEREzBUW2hzlXX/dWFbQdUWzpkqvMFVpUAdRlo1lUlhKMObDHiAo09oZ94x4cS3uWMJebPOTn+GaQYLfv3Q==}
+
+  stubborn-fs@1.2.5:
+    resolution: {integrity: sha512-H2N9c26eXjzL/S/K+i/RHHcFanE74dptvvjM8iwzwbVcWY/zjBbgRqF3K0DY4+OD+uTTASTBvDoxPDaPN02D7g==}
+
+  stubborn-fs@2.0.0:
+    resolution: {integrity: sha512-Y0AvSwDw8y+nlSNFXMm2g6L51rBGdAQT20J3YSOqxC53Lo3bjWRtr2BKcfYoAf352WYpsZSTURrA0tqhfgudPA==}
+
+  stubborn-utils@1.0.2:
+    resolution: {integrity: sha512-zOh9jPYI+xrNOyisSelgym4tolKTJCQd5GBhK0+0xJvcYDcwlOoxF/rnFKQ2KRZknXSG9jWAp66fwP6AxN9STg==}
+
+  tiny-bin@1.11.3:
+    resolution: {integrity: sha512-CrBbiKsvJN4bHSDA0cPau4t5KWdGUUAcTXQ8bB14XNqNY+68UZF4Zo7WRVdHLq0j0GYZjIRbNDg+zJbJXDEXeg==}
+
+  tiny-colors@2.2.2:
+    resolution: {integrity: sha512-Elmv7JL+dX0c78caKEelH1nHHBskHzJkaqBRgVvQuxsvVA/Z9Fa2R3ZZtfmkkajcd18e96RLMwJvtFqC8jsZWA==}
+
+  tiny-encryptor@1.0.1:
+    resolution: {integrity: sha512-lCAJqlCH7nWpnAfx35AFFcN6AmqwvR8djYRua20ax/xHI7BfQMsk2iY6cwwfH6GIByi18y0FKMslNVu4sRYQEQ==}
+
+  tiny-levenshtein@1.1.0:
+    resolution: {integrity: sha512-sU4wduNrjb2e51rgPOTy6nx3ag8pQPFA9XQCQQsFmECWEDS23LEoYsZv3fhVuJNIcxzBNMvCDDb7e/PPOP+vxw==}
+
+  tiny-parse-argv@2.8.2:
+    resolution: {integrity: sha512-RnIDHQ+r9zMuslQWVoRxfKVOumteeheQqbwNYJyQxzM2vzx/vdN5xAeL64F3rQOpfbVdxFkhM4zPDyfq7SxsBQ==}
+
+  tiny-readdir@2.7.4:
+    resolution: {integrity: sha512-721U+zsYwDirjr8IM6jqpesD/McpZooeFi3Zc6mcjy1pse2C+v19eHPFRqz4chGXZFw7C3KITDjAtHETc2wj7Q==}
+
+  tiny-updater@3.7.0:
+    resolution: {integrity: sha512-d1qNP+YObARMlu2FS3XiJmLTj7JGIWrpKB7Vj1WmPmdAUHDI6yXRE1AmI671bTZKsnC3lCrMSnAu5zG1A5gGag==}
+
+  tiny-webcrypto@1.0.3:
+    resolution: {integrity: sha512-LQQdNMAgz9BXNT2SKbYh3eCb+fLV0p7JB7MwUjzY6IOlQLGIadfnFqRpshERsS5Dl2OM/hs0+4I/XmSrF+RBbw==}
+
+  tsex@4.0.2:
+    resolution: {integrity: sha512-vp/uRp3qKS8NJuZfk2yCzpiLsxKCd0cW5FrS0JrCSrw0FSe/bNXgH1eVMHagTaWqWGjj6zpMQld37mWNW0l2qQ==}
+    hasBin: true
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  uint-rng@1.2.1:
+    resolution: {integrity: sha512-swhDg5H+3DX2sIvnYA7VMBMXV/t8mPxvh49CjCDkwFmj/3OZIDOQwJANBgM1MPSUBrUHNIlXmU7/GcL7m4907g==}
+
+  uint8-concat@1.0.1:
+    resolution: {integrity: sha512-iCNhNP3tQ1aO0Tb/xezhszggfvIVxXlcpS5v90c6PrJ3bagsydzxlphear455h9lVDrfsJjkz0TtIgB7FVltHw==}
+
+  uint8-encoding@2.0.1:
+    resolution: {integrity: sha512-xZAjZ+3OvrDtjFLLgojrLmG6T0YwZEo0OTyqCBxFjlFimIKnLtFqyYk6z/jDOUlJFJE52Srtrv4W4x7t4Cn/dA==}
+
+  uint8-to-hex@2.0.1:
+    resolution: {integrity: sha512-Pn73HKfN/owF964aQlpyIH/Ye5iIzlqQMD2T51DxdY/+u1tFPDnhg2MJepL24DuxS/pbj/vV6cW1LMfC95G5PQ==}
+
+  watcher@2.3.1:
+    resolution: {integrity: sha512-d3yl+ey35h05r5EFP0TafE2jsmQUJ9cc2aernRVyAkZiu0J3+3TbNugNcqdUJDoWOfL2p+bNsN427stsBC/HnA==}
+
+  when-exit@2.1.5:
+    resolution: {integrity: sha512-VGkKJ564kzt6Ms1dbgPP/yuIoQCrsFAnRbptpC5wOEsDaNsbCB2bnfnaA8i/vRs5tjUSEOtIuvl9/MyVsvQZCg==}
+
+  zeptomatch@1.2.2:
+    resolution: {integrity: sha512-0ETdzEO0hdYmT8aXHHf5aMjpX+FHFE61sG4qKFAoJD2Umt3TWdCmH7ADxn2oUiWTlqBGC+SGr8sYMfr+37J8pQ==}
+
+snapshots:
+
+  ansi-purge@1.1.0: {}
+
+  are-deeply-equal@1.1.2: {}
+
+  atomically@2.1.1:
+    dependencies:
+      stubborn-fs: 2.0.0
+      when-exit: 2.1.5
+
+  bigint-encoding@1.0.1: {}
+
+  call-chainer@3.0.1: {}
+
+  crypto-miller-rabin@1.0.1:
+    dependencies:
+      crypto-random-in-range: 2.0.1
+      fast-mod-exp: 1.0.1
+
+  crypto-pbkdf2-hmac@2.2.2:
+    dependencies:
+      tiny-webcrypto: 1.0.3
+      uint8-to-hex: 2.0.1
+
+  crypto-random-bigint@2.1.1:
+    dependencies:
+      uint-rng: 1.2.1
+
+  crypto-random-in-range@2.0.1:
+    dependencies:
+      crypto-random-bigint: 2.1.1
+
+  crypto-random-prime@1.0.1:
+    dependencies:
+      crypto-miller-rabin: 1.0.1
+      crypto-random-bigint: 2.1.1
+
+  crypto-random-uint8@2.0.1:
+    dependencies:
+      tiny-webcrypto: 1.0.3
+
+  crypto-sha@2.1.1:
+    dependencies:
+      tiny-webcrypto: 1.0.3
+      uint8-to-hex: 2.0.1
+
+  dettle@1.0.5: {}
+
+  fast-mod-exp@1.0.1: {}
+
+  fast-string-truncated-width@3.0.3: {}
+
+  fast-string-width@3.0.2:
+    dependencies:
+      fast-string-truncated-width: 3.0.3
+
+  fava@0.3.5:
+    dependencies:
+      are-deeply-equal: 1.1.2
+      call-chainer: 3.0.1
+      promise-make-naked: 2.1.2
+      promise-resolve-timeout: 2.0.1
+      specialist: 1.4.5
+      tiny-colors: 2.2.2
+      tiny-readdir: 2.7.4
+      watcher: 2.3.1
+      zeptomatch: 1.2.2
+
+  find-up-json@2.0.5:
+    dependencies:
+      find-up-path: 1.0.1
+
+  find-up-path@1.0.1: {}
+
+  function-once@3.0.1: {}
+
+  get-current-package@1.0.1:
+    dependencies:
+      find-up-json: 2.0.5
+
+  grammex@3.1.13: {}
+
+  hex-encoding@2.0.3:
+    dependencies:
+      node-buffer-encoding: 1.0.3
+      uint8-encoding: 2.0.1
+
+  int32-encoding@1.0.1: {}
+
+  ionstore@1.0.1: {}
+
+  node-buffer-encoding@1.0.3: {}
+
+  promise-make-counter@1.0.2:
+    dependencies:
+      promise-make-naked: 3.0.2
+
+  promise-make-naked@2.1.2: {}
+
+  promise-make-naked@3.0.2: {}
+
+  promise-resolve-timeout@2.0.1: {}
+
+  specialist@1.4.5:
+    dependencies:
+      tiny-bin: 1.11.3
+      tiny-colors: 2.2.2
+      tiny-parse-argv: 2.8.2
+      tiny-updater: 3.7.0
+
+  stubborn-fs@1.2.5: {}
+
+  stubborn-fs@2.0.0:
+    dependencies:
+      stubborn-utils: 1.0.2
+
+  stubborn-utils@1.0.2: {}
+
+  tiny-bin@1.11.3:
+    dependencies:
+      ansi-purge: 1.1.0
+      fast-string-width: 3.0.2
+      get-current-package: 1.0.1
+      tiny-colors: 2.2.2
+      tiny-levenshtein: 1.1.0
+      tiny-parse-argv: 2.8.2
+      tiny-updater: 3.7.0
+
+  tiny-colors@2.2.2: {}
+
+  tiny-encryptor@1.0.1:
+    dependencies:
+      crypto-pbkdf2-hmac: 2.2.2
+      crypto-random-uint8: 2.0.1
+      crypto-sha: 2.1.1
+      int32-encoding: 1.0.1
+      tiny-webcrypto: 1.0.3
+      uint8-concat: 1.0.1
+      uint8-encoding: 2.0.1
+
+  tiny-levenshtein@1.1.0: {}
+
+  tiny-parse-argv@2.8.2: {}
+
+  tiny-readdir@2.7.4:
+    dependencies:
+      promise-make-counter: 1.0.2
+
+  tiny-updater@3.7.0:
+    dependencies:
+      function-once: 3.0.1
+      ionstore: 1.0.1
+      tiny-colors: 2.2.2
+      when-exit: 2.1.5
+
+  tiny-webcrypto@1.0.3: {}
+
+  tsex@4.0.2:
+    dependencies:
+      atomically: 2.1.1
+      dettle: 1.0.5
+      specialist: 1.4.5
+      tiny-readdir: 2.7.4
+      watcher: 2.3.1
+
+  typescript@5.9.3: {}
+
+  uint-rng@1.2.1:
+    dependencies:
+      tiny-webcrypto: 1.0.3
+
+  uint8-concat@1.0.1: {}
+
+  uint8-encoding@2.0.1: {}
+
+  uint8-to-hex@2.0.1:
+    dependencies:
+      hex-encoding: 2.0.3
+
+  watcher@2.3.1:
+    dependencies:
+      dettle: 1.0.5
+      stubborn-fs: 1.2.5
+      tiny-readdir: 2.7.4
+
+  when-exit@2.1.5: {}
+
+  zeptomatch@1.2.2:
+    dependencies:
+      grammex: 3.1.13

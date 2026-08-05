@@ -27,5 +27,20 @@ describe ( 'Crypto Puzzle', it => {
     }
 
   });
+  it ( 'can generate multiple puzzles from shared params', async t => {
+
+  const params = Puzzle.generateParams ({ primeBits: 100, primeRounds: 20 });
+
+  const puzzle1 = await Puzzle.generate ({ duration: 500, message: 'msg1' }, params );
+  const puzzle2 = await Puzzle.generate ({ duration: 500, message: 'msg2' }, params );
+
+  const solution1 = await Puzzle.solve ( puzzle1 );
+  const solution2 = await Puzzle.solve ( puzzle2 );
+
+  t.is ( 'msg1', solution1 );
+  t.is ( 'msg2', solution2 );
 
 });
+
+});
+

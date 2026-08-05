@@ -1,6 +1,4 @@
-
 /* IMPORT */
-
 import fme from 'fast-mod-exp';
 import Encryptor from 'tiny-encryptor';
 import getPrime from 'crypto-random-prime';
@@ -11,7 +9,7 @@ import U8 from 'uint8-encoding';
 import BigEnc from 'bigint-encoding';
 import Archiver from './archiver';
 import {sfme} from './utils';
-import type {Options} from './types';
+import type {Options, ParamsOptions, Params} from './types';
 
 /* MAIN */
 
@@ -21,19 +19,34 @@ const CryptoPuzzle = {
 
   /* API */
 
-  generate: async ( options: Options ): Promise<Uint8Array> => {
+  // Expensive step, isolated: generates the (n, n1) modulus pair from two
+  // fresh large primes. This is the costly part of puzzle generation.
+  // Call this ONCE, then reuse the returned params for many puzzles via
+  // `generate(options, params)` or use `generateMany` directly.
+  generateParams: ( options: ParamsOptions = {} ): Params => {
 
     const PRIME_BITS = options.primeBits ?? 100;
     const PRIME_ROUNDS = options.primeRounds ?? 20;
-    const OPS_PER_SECOND = options.opsPerSecond ?? 3_300_000;
-    const DURATION = options.duration ?? 1_000;
-    const MESSAGE = options.message;
 
     const p = getPrime ( PRIME_BITS, PRIME_ROUNDS );
     const q = getPrime ( PRIME_BITS, PRIME_ROUNDS );
-
     const n = p * q;
     const n1 = ( p - 1n ) * ( q - 1n );
+
+    return { n, n1 };
+
+  },
+
+  // Cheap step: builds one puzzle. If `params` is provided, prime
+  // generation is skipped entirely and the given (n, n1) are reused —
+  // this is the part that makes "one generation, multiple puzzles" work.
+  generate: async ( options: Options, params?: Params ): Promise<Uint8Array> => {
+
+    const { n, n1 } = params ?? CryptoPuzzle.generateParams ( options );
+
+    const OPS_PER_SECOND = options.opsPerSecond ?? 3_300_000;
+    const DURATION = options.duration ?? 1_000;
+    const MESSAGE = options.message;
 
     const S = OPS_PER_SECOND;
     const T = DURATION;
@@ -46,11 +59,27 @@ const CryptoPuzzle = {
     const a = getInRange ( 1n, n - 1n );
     const e = fme ( 2n, t, n1 );
     const b = fme ( a, e, n );
+
     const Ck = BigEnc.encode ( K ) + b;
 
     const archive = Archiver.archive ([ n, a, t, Ck, Cm ]);
 
     return archive;
+
+  },
+
+  // Convenience wrapper: generates shared params once, then produces one
+  // puzzle per message reusing those params. Solves the GitHub issue
+  // directly — many puzzles from a single (expensive) prime generation.
+  generateMany: async ( optionsList: Options[], paramsOptions: ParamsOptions = {} ): Promise<Uint8Array[]> => {
+
+    const params = CryptoPuzzle.generateParams ( paramsOptions );
+
+    const puzzles = await Promise.all (
+      optionsList.map ( options => CryptoPuzzle.generate ( options, params ) )
+    );
+
+    return puzzles;
 
   },
 
@@ -60,6 +89,7 @@ const CryptoPuzzle = {
 
     const b = sfme ( a, t, n );
     const K = BigEnc.decode ( Ck - b );
+
     const M_uint8 = await Encryptor.decrypt ( Cm, K );
     const M = U8.decode ( M_uint8 );
 
@@ -72,4 +102,5 @@ const CryptoPuzzle = {
 /* EXPORT */
 
 export default CryptoPuzzle;
-export type {Options};
+
+export type {Options, ParamsOptions, Params};
